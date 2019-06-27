@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/layout/tin-flex.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<style>
 		body {
 			font-family: 'Open Sans', sans-serif;
@@ -86,10 +87,13 @@
 	
 </div>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>	
 <script type="text/javascript">
 
 
 $(document).ready(function(){
+	
+	$('#myPanel').draggable();
 
 	$('#callMe').on('click', function(){
 	
