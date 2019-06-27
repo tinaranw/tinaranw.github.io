@@ -64,7 +64,7 @@
 
 						<h1>Lorem Ipsum</h1>
 						<p>Lorem Ipsum</p>
-						<a href="#" class="btn btn-primary">Call Me!</a> &nbsp; 
+						<a href="#" class="btn btn-primary" id="callMe">Call Me!</a> &nbsp; 
 						<a href="#" class="btn btn-secondary">Read More</a> &nbsp;
 						<a href="#" class="btn btn-secondary btn-sm">Read More</a> &nbsp;
 						<a href="#" class="btn btn-secondary btn-lg">Read More</a>
@@ -81,7 +81,7 @@
 
 </div>
 	
-<div style="position:fixed;top:calc(50% - 100px);left:calc(50% - 100px);width:200px; height:200px;border: 1px solid #ddd;background-color: #fff;">
+<div id="myPanel" style="position:fixed;top:calc(50% - 100px);left:calc(50% - 100px);width:200px; height:200px;border: 1px solid #ddd;background-color: #fff;display:none;">
 
 	
 </div>
@@ -91,8 +91,12 @@
 
 $(document).ready(function(){
 
+	$('#callMe').on('click', function(){
+	
+		$('#myPanel').css('display','block');	
+		
+	});
   
-
 });
 	
 </script>
