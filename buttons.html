@@ -146,7 +146,7 @@
 </div>
 	
 	
-<div class="modal-dialogue youtube1">
+<div id="youtube1" class="modal-dialogue">
 	<div class="modal-overlay">
 	</div>
 	<div class="modal-container">
@@ -157,7 +157,7 @@
 	</div>
 	
 </div>
-<div class="modal-dialogue youtube2">
+<div id="youtube2" class="modal-dialogue">
 	<div class="modal-overlay">
 	</div>
 	<div class="modal-container">
@@ -189,8 +189,7 @@ $(document).ready(function(){
 	$('#viewDemo').on('click', function(){
 		
 		var s = $('#myvideo').val();
-		alert(s);
-		//showModal('.youtube2');
+		showModal('#' + s);
 		
 	});
 	
