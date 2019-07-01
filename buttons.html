@@ -181,19 +181,26 @@ $(document).ready(function(){
 		$('#panel').css('display','block');	
 		
 	});
-  
+
 	$('#viewDemo').on('click', function(){
-	
-		$('#modalDialogue2').css('display','flex');	
+		
+		showModal('modalDialogue2');
+		/*$('#modalDialogue2').css('display','flex');*/	
 		
 	});
 	
-	$('.modal-overlay').on('click', function(){
-	
-		$('#modalDialogue').css('display','none');	
-		
-	});
 });
+	
+function showModal(id){
+
+	$('#' + id).css('display','flex');	
+
+	$('#' + id + ' .modal-overlay').on('click', function(){
+	
+		$('#' + id).css('display','none');	
+		
+	});
+}
 	
 </script>
 
