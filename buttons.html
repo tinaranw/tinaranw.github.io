@@ -143,7 +143,8 @@
 	
 </div>
 	
-<div id="modalDialogue" class="modal-dialogue">
+	
+<div class="modal-dialogue youtube1">
 	<div class="modal-overlay">
 	</div>
 	<div class="modal-container">
@@ -154,7 +155,7 @@
 	</div>
 	
 </div>
-<div id="modalDialogue2" class="modal-dialogue">
+<div class="modal-dialogue youtube2">
 	<div class="modal-overlay">
 	</div>
 	<div class="modal-container">
@@ -165,6 +166,10 @@
 	</div>
 	
 </div>
+
+My Video:
+<input id="myvideo" type="text">
+	
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>	
 <script type="text/javascript">
@@ -184,20 +189,21 @@ $(document).ready(function(){
 
 	$('#viewDemo').on('click', function(){
 		
-		showModal('modalDialogue');
-		/*$('#modalDialogue2').css('display','flex');*/	
+		var s = $('#myvideo').val();
+		alert(s);
+		//showModal('.youtube2');
 		
 	});
 	
 });
 	
-function showModal(id){
+function showModal(s){
 
-	$('#' + id).css('display','flex');	
+	$(s).css('display','flex');	
 
-	$('#' + id + ' .modal-overlay').on('click', function(){
+	$(s + ' .modal-overlay').on('click', function(){
 	
-		$('#' + id).css('display','none');	
+		$(s).css('display','none');	
 		
 	});
 }
