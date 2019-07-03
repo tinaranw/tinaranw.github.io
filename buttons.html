@@ -132,6 +132,10 @@
 						 	<option value="youtube1">Video 1</option>
 						 	<option value="youtube2">Video 2</option>
 						</select>
+						<select id="selectWidth">
+						 	<option value="500">500px</option>
+						 	<option value="800">800px</option>
+						</select>
 
 					</div>
 
@@ -193,7 +197,9 @@ $(document).ready(function(){
 
 	$('#btnViewDemo').on('click', function(){
 		
-		$('.modal-container').css('max-width','1000px');
+		var a = $('#selectWidth').val();
+		$('.modal-container').css('max-width', a + 'px');
+		
 		var s = $('#selectVideo').val();
 		showModal('#' + s);
 		
