@@ -108,6 +108,7 @@
 			height:50px;
 			border: 1px solid #000;
 			margin: 5px;
+			cursor:pointer;
 		}
 	</style>
 </head>
@@ -223,7 +224,7 @@ $(document).ready(function(){
 	
 	$('.pick-color').on('click', function(){
 		var c = $(this).css('background-color');
-		alert(c);
+		$('body').css('background-color', c);
 	});
 	
 	$('#btnViewDemo').on('click', function(){
