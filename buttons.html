@@ -125,18 +125,35 @@
 						<a href="#" class="btn btn-secondary" id="btnViewDemo" >View Demo</a> &nbsp;
 						<a href="#" class="btn btn-secondary btn-sm">Read More</a> &nbsp;
 						<a href="#" class="btn btn-secondary btn-lg">Read More</a>
+						
+						<hr>
+						
 						My Video:
-						<input id="myvideo" type="text"/>
+						<br>
 						
 						<select id="selectVideo">
 						 	<option value="youtube1">Video 1</option>
 						 	<option value="youtube2">Video 2</option>
 						</select>
+						<br>
+						
+						Width:
+						<br>
+						
 						<select id="selectWidth">
 						 	<option value="500">500px</option>
 						 	<option value="800">800px</option>
 						</select>
-
+						<br>
+						
+						Background Color:
+						<br>
+						
+						<select id="selectColor">
+						 	<option value="#969696">Grey</option>
+						 	<option value="#990000">Maroon</option>
+						</select>
+						
 					</div>
 
 				</div>
@@ -196,6 +213,9 @@ $(document).ready(function(){
 	});
 
 	$('#btnViewDemo').on('click', function(){
+		
+		var c = $('#selectColor').val();
+		$('.modal-container').css('background-color', c);
 		
 		var a = $('#selectWidth').val();
 		$('.modal-container').css('max-width', a + 'px');
