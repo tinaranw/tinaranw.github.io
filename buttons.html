@@ -103,6 +103,12 @@
 			border: 1px solid #aaa;
 			z-index:1;
 		}
+		.pick-color {
+			width:50px;
+			height:50px;
+			border: 1px solid #000;
+			margin: 5px;
+		}
 	</style>
 </head>
 <body>
@@ -141,8 +147,8 @@
 						<br>
 						
 						<select id="selectWidth">
-						 	<option value="500">500px</option>
-						 	<option value="800">800px</option>
+						 	<option value="500px">500px</option>
+						 	<option value="800px">800px</option>
 						</select>
 						<br>
 						
@@ -153,6 +159,9 @@
 						 	<option value="#969696">Grey</option>
 						 	<option value="#990000">Maroon</option>
 						</select>
+						<br>
+						<div class="pick-color" style="background-color:#969696;"></div>
+						<div class="pick-color" style="background-color:#990000;"></div>
 						
 					</div>
 
@@ -211,14 +220,19 @@ $(document).ready(function(){
 		$('#panel').css('display','block');	
 		
 	});
-
+	
+	$('.pick-color').on('click', function(){
+		var c = $(this).css('background-color');
+		alert(c);
+	});
+	
 	$('#btnViewDemo').on('click', function(){
 		
 		var c = $('#selectColor').val();
 		$('.modal-overlay').css('background-color', c);
 		
 		var a = $('#selectWidth').val();
-		$('.modal-container').css('max-width', a + 'px');
+		$('.modal-container').css('max-width', a);
 		
 		var s = $('#selectVideo').val();
 		showModal('#' + s);
