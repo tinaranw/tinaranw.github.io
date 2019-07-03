@@ -113,7 +113,7 @@
 
 		<div class="box-12 v-mid h-center">
 
-			<div id="containerVideo" style="max-width:500px;" class="container-fluid">
+			<div style="max-width:500px;" class="container-fluid">
 
 				<div class="row">
 
@@ -193,7 +193,7 @@ $(document).ready(function(){
 
 	$('#btnViewDemo').on('click', function(){
 		
-		$('#containerVideo').css('max-width','1000px');
+		$('.modal-container').css('max-width','1000px');
 		var s = $('#selectVideo').val();
 		showModal('#' + s);
 		
