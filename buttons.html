@@ -113,7 +113,7 @@
 
 		<div class="box-12 v-mid h-center">
 
-			<div style="max-width:500px;" class="container-fluid">
+			<div id="containerVideo" style="max-width:500px;" class="container-fluid">
 
 				<div class="row">
 
@@ -122,11 +122,16 @@
 						<h1>Lorem Ipsum</h1>
 						<p>Lorem Ipsum</p>
 						<a href="#" class="btn btn-primary" id="callMe">Call Me!</a> &nbsp; 
-						<a href="#" class="btn btn-secondary" id="viewDemo" >View Demo</a> &nbsp;
+						<a href="#" class="btn btn-secondary" id="btnViewDemo" >View Demo</a> &nbsp;
 						<a href="#" class="btn btn-secondary btn-sm">Read More</a> &nbsp;
 						<a href="#" class="btn btn-secondary btn-lg">Read More</a>
 						My Video:
 						<input id="myvideo" type="text"/>
+						
+						<select id="selectVideo">
+						 	<option value="youtube1">Video 1</option>
+						 	<option value="youtube2">Video 2</option>
+						</select>
 
 					</div>
 
@@ -186,9 +191,10 @@ $(document).ready(function(){
 		
 	});
 
-	$('#viewDemo').on('click', function(){
+	$('#btnViewDemo').on('click', function(){
 		
-		var s = $('#myvideo').val();
+		$('#containerVideo').css('max-width','1000px');
+		var s = $('#selectVideo').val();
 		showModal('#' + s);
 		
 	});
