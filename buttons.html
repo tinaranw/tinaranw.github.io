@@ -164,6 +164,12 @@
 						<div class="pick-color" style="background-color:#969696;"></div>
 						<div class="pick-color" style="background-color:#990000;"></div>
 						
+						Width:
+						<input id="inpWidth" type="text">
+						<select id="selectUnit">
+						 	<option value="px">px</option>
+						 	<option value="%">%</option>
+						</select>
 					</div>
 
 				</div>
@@ -232,8 +238,9 @@ $(document).ready(function(){
 		var c = $('#selectColor').val();
 		$('.modal-overlay').css('background-color', c);
 		
-		var a = $('#selectWidth').val();
-		$('.modal-container').css('max-width', a);
+		var a = $('#selectUnit').val();
+		var b = $('#inpWidth').val();
+		$('.modal-container').css('max-width', b + a);
 		
 		var s = $('#selectVideo').val();
 		showModal('#' + s);
