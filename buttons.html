@@ -278,6 +278,31 @@ $(document).ready(function(){
 		var item2 = $('#chkItem1').prop('checked');
 		var item3 = $('#chkItem1').prop('checked');
 		
+		var myself = '';
+		if(item1 == true){
+			if(myself == ''){
+				myself = myself + 'Food Lover';
+			} else {
+				myself = myself + ', Food Lover';
+			}
+		}
+		if(item2 == true){
+			if(myself == ''){
+				myself = myself + 'Hiking Addict';
+			} else {
+				myself = myself + ', Hiking Addict';
+			}
+		}
+		if(item3 == true){
+			if(myself == ''){
+				myself = myself + 'Traveler';
+			} else {
+				myself = myself + ', Traveler';
+			}
+		}
+		
+		myself = myself + '.';
+		
 		var name = $('#inpName').val();
 		var job = $('#inpJob').val();
 		var city = $('#inpCity').val();
@@ -285,6 +310,7 @@ $(document).ready(function(){
 		var email = $('#inpEmail').val();
 		
 		var s = '<b>' + name + '</b>' +
+		    	myself +
 			'<br>' +
 		    	job + '.<br>' +
 			'Currently living in ' + city + ', ' + country + '.' ;
