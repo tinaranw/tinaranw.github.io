@@ -174,11 +174,41 @@
 						<br>
 						<br>
 						
+						Your Name: 
+						<br>
+						<input id="inpName" type="text">
+						<br>
+						
+						Job:
+						<br>
+						<input id="inpJob" type="text">
+						<br>
+						
+						City:
+						<br>
+						<input id="inpCity" type="text">
+						<br>
+						
+						Country:
+						<br>
+						<input id="inpCountry" type="text">
+						<br>
+						
+						Email:
+						<br>
+						<input id="inpEmail" type="text">
+						<br>
+						
 						Describe yourself:
 						<br>
 						<input type="checkbox" id="chkItem1"> Food Lover<br>
 						<input type="checkbox" id="chkItem2"> Hiking Addict<br>
 						<input type="checkbox" id="chkItem3"> Traveler<br>
+						
+						<br>
+						
+						<div id="divProfile">
+						</div>
 					</div>
 
 				</div>
@@ -245,9 +275,18 @@ $(document).ready(function(){
 	$('#btnViewDemo').on('click', function(){
 		
 		var item1 = $('#chkItem1').prop('checked');
-		alert(item1);
+		var item2 = $('#chkItem1').prop('checked');
+		var item3 = $('#chkItem1').prop('checked');
 		
-		var c = $('#selectColor').val();
+		var name = $('#inpName').val();
+		var job = $('#inpJob').val();
+		var city = $('#inpCity').val();
+		var country = $('#inpCountry').val();
+		var email = $('#inpEmail').val();
+		
+		$('#divProfile').html('Tinara Nathania');
+		
+		/*var c = $('#selectColor').val();
 		$('.modal-overlay').css('background-color', c);
 		
 		var a = $('#selectUnit').val();
@@ -255,7 +294,7 @@ $(document).ready(function(){
 		$('.modal-container').css('max-width', b + a);
 		
 		var s = $('#selectVideo').val();
-		showModal('#' + s);
+		showModal('#' + s);*/
 		
 	});
 	
