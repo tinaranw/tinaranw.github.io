@@ -284,7 +284,12 @@ $(document).ready(function(){
 		var country = $('#inpCountry').val();
 		var email = $('#inpEmail').val();
 		
-		$('#divProfile').html('Tinara Nathania');
+		var s = '<b>' + name + '</b>' +
+			'<br>' +
+		    	job + '.<br>' +
+			'Currently living in ' + city + ', ' + country + '.' ;
+		
+		$('#divProfile').html(s);
 		
 		/*var c = $('#selectColor').val();
 		$('.modal-overlay').css('background-color', c);
