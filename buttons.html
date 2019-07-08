@@ -170,6 +170,15 @@
 						 	<option value="px">px</option>
 						 	<option value="%">%</option>
 						</select>
+						
+						<br>
+						<br>
+						
+						Describe yourself:
+						<br>
+						<input type="checkbox" id="chkItem1"> Food Lover<br>
+						<input type="checkbox" id="chkItem2"> Hiking Addict<br>
+						<input type="checkbox" id="chkItem3"> Traveler<br>
 					</div>
 
 				</div>
@@ -234,6 +243,9 @@ $(document).ready(function(){
 	});
 	
 	$('#btnViewDemo').on('click', function(){
+		
+		var item1 = $('#chkItem1').prop('checked');
+		alert(item1);
 		
 		var c = $('#selectColor').val();
 		$('.modal-overlay').css('background-color', c);
