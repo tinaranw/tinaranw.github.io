@@ -56,7 +56,12 @@
 
 		}
 		label {
-			display:block;
+			display: block;
+    			padding: 15px 0 8px;
+		}
+		.myself label{
+			display: block;
+			padding: 5px 0;
 		}
 	</style>
 </head>
@@ -90,11 +95,12 @@
 						
 						<label for="inpEmail">Email:</label>
 						<input id="inpEmail" type="text">
+						<br>
 						
 						Describe yourself:
 						<br>
 						
-						<div style="display:flex;">
+						<div class="myself" style="display:flex;">
 							<div>
 								<label for="chkItem1"><input type="checkbox" id="chkItem1"> Food Lover</label>
 								<label for="chkItem2"><input type="checkbox" id="chkItem2"> Hiking Addict</label>
