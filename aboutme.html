@@ -65,39 +65,53 @@
 						<h1>About Me</h1>
 						<br>
 						
-						Your Name: 
+						<label for="inpName">Your Name:</label>
 						<br>
 						<input id="inpName" type="text">
 						<br>
 						
-						Job:
+						<label for="inpJob">Job:</label>
 						<br>
 						<input id="inpJob" type="text">
 						<br>
 						
-						City:
+						<label for="inpCity">City:</label>
 						<br>
 						<input id="inpCity" type="text">
 						<br>
 						
-						Country:
+						<label for="inpCountry">Country:</label>
 						<br>
 						<input id="inpCountry" type="text">
 						<br>
 						
-						Email:
+						<label for="inpEmail">Email:</label>
 						<br>
 						<input id="inpEmail" type="text">
 						<br>
 						
 						Describe yourself:
 						<br>
-						<input type="checkbox" id="chkItem1"> Food Lover<br>
-						<input type="checkbox" id="chkItem2"> Hiking Addict<br>
-						<input type="checkbox" id="chkItem3"> Traveler<br>
+						
+						<div style="display:flex;">
+							<div>
+								<input type="checkbox" id="chkItem1"> Food Lover<br>
+								<input type="checkbox" id="chkItem2"> Hiking Addict<br>
+								<input type="checkbox" id="chkItem3"> Traveler<br>
+								<input type="checkbox" id="chkItem4"> Storyteller<br>
+							</div>
+							<div>
+								<input type="checkbox" id="chkItem5"> Nature Enthusiast<br>
+								<input type="checkbox" id="chkItem6"> Football fan<br>
+								<input type="checkbox" id="chkItem7"> Blogger<br>
+								<input type="checkbox" id="chkItem8"> Makeup Enthusiast<br>
+							</div>
+						</div>
+						<label for="inpOther">Other:</label>
+						<input type="text" id="inpOther">
 						
 						<br>
-						<a href="#" class="btn btn-secondary" id="btnViewDemo" >View Demo</a> &nbsp;
+						<a href="#" class="btn btn-secondary" id="btnGenerate" >Generate My Profile</a> &nbsp;
 						<br>
 						
 					</div>
@@ -137,32 +151,80 @@
 
 $(document).ready(function(){
 	
-	$('#btnViewDemo').on('click', function(){
+	$('#btnGenerate').on('click', function(){
 		
 		var item1 = $('#chkItem1').prop('checked');
 		var item2 = $('#chkItem2').prop('checked');
 		var item3 = $('#chkItem3').prop('checked');
+		var item4 = $('#chkItem4').prop('checked');
+		var item5 = $('#chkItem5').prop('checked');
+		var item6 = $('#chkItem6').prop('checked');
+		var item7 = $('#chkItem7').prop('checked');
+		var item8 = $('#chkItem8').prop('checked');
 		
 		var myself = '';
 		if(item1 == true){
 			if(myself == ''){
-				myself = myself + 'Food Lover';
+				myself += 'Food Lover';
 			} else {
-				myself = myself + ', Food Lover';
+				myself += ', Food Lover';
 			}
 		}
 		if(item2 == true){
 			if(myself == ''){
-				myself = myself + 'Hiking Addict';
+				myself += 'Hiking Addict';
 			} else {
-				myself = myself + ', Hiking Addict';
+				myself += ', Hiking Addict';
 			}
 		}
 		if(item3 == true){
 			if(myself == ''){
-				myself = myself + 'Traveler';
+				myself += 'Traveler';
 			} else {
-				myself = myself + ', Traveler';
+				myself += ', Traveler';
+			}
+		}
+		if(item4 == true){
+			if(myself == ''){
+				myself += 'Storyteller';
+			} else {
+				myself += ', Storyteller';
+			}
+		}
+		if(item5 == true){
+			if(myself == ''){
+				myself += 'Nature Enthusiast';
+			} else {
+				myself += ', Nature Enthusiast';
+			}
+		}
+		if(item6 == true){
+			if(myself == ''){
+				myself += 'Football Fan';
+			} else {
+				myself += ', Football Fan';
+			}
+		}
+		if(item7 == true){
+			if(myself == ''){
+				myself += 'Blogger';
+			} else {
+				myself += ', Blogger';
+			}
+		}
+		if(item8 == true){
+			if(myself == ''){
+				myself += 'Makeup Enthusiast';
+			} else {
+				myself += ', Makeup Enthusiast';
+			}
+		}
+		var other = $('#inpOther').val();
+		if(other != ''){
+			if(myself == ''){
+				myself += other;
+			} else {
+				myself += ', ' + other;
 			}
 		}
 		
