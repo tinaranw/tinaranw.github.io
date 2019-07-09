@@ -8,7 +8,45 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<style>
-		
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+		.btn {
+			font-family: 'Open Sans', sans-serif;
+			display: inline-block;
+			background-color: #e3e3e3;
+			border: 2px solid transparent;
+			padding: 10px 20px;
+			text-decoration: none;
+			color: #333;
+			font-size: 16px;
+			line-height: 1.5;
+			transition: all 0.3s ease-in-out;
+			margin: 3px 0px;
+		}
+		.btn-primary {
+			border: 2px solid #333;
+			background-color: transparent;
+		}
+		.btn-primary:hover {
+			border: 2px solid #ff8201;
+			color: #ff8201;
+		}
+		.btn-secondary {
+			border: 2px solid transparent;
+			background-color: #e3e3e3;
+		}
+		.btn-secondary:hover {
+			background-color: #e7e7e7;
+		}
+		.btn-sm {
+			padding: 5px 15px;
+    			font-size: 13px;
+		}
+		.btn-lg {
+			padding: 14px 35px;
+    			font-size: 18px;
+		}
 	</style>
 </head>
 <body>
@@ -17,7 +55,60 @@
 
 	<div class="section">
 
-		<div class="box-12 v-mid h-center">
+		<div class="box-6 v-mid h-center">
+
+			<div style="max-width:500px;" class="container-fluid">
+
+				<div class="row">
+
+					<div class="col-12">
+						
+						Your Name: 
+						<br>
+						<input id="inpName" type="text">
+						<br>
+						
+						Job:
+						<br>
+						<input id="inpJob" type="text">
+						<br>
+						
+						City:
+						<br>
+						<input id="inpCity" type="text">
+						<br>
+						
+						Country:
+						<br>
+						<input id="inpCountry" type="text">
+						<br>
+						
+						Email:
+						<br>
+						<input id="inpEmail" type="text">
+						<br>
+						
+						Describe yourself:
+						<br>
+						<input type="checkbox" id="chkItem1"> Food Lover<br>
+						<input type="checkbox" id="chkItem2"> Hiking Addict<br>
+						<input type="checkbox" id="chkItem3"> Traveler<br>
+						
+						<br>
+						<a href="#" class="btn btn-secondary" id="btnViewDemo" >View Demo</a> &nbsp;
+						<br>
+						
+						<div id="divProfile">
+						</div>
+						
+					</div>
+
+				</div>
+
+			</div>  
+
+		</div>
+		<div class="box-6 v-mid h-center">
 
 			<div style="max-width:500px;" class="container-fluid">
 
@@ -40,12 +131,58 @@
 	
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>	
 <script type="text/javascript">
 
 
 $(document).ready(function(){
 	
+	$('#btnViewDemo').on('click', function(){
+		
+		var item1 = $('#chkItem1').prop('checked');
+		var item2 = $('#chkItem2').prop('checked');
+		var item3 = $('#chkItem3').prop('checked');
+		
+		var myself = '';
+		if(item1 == true){
+			if(myself == ''){
+				myself = myself + 'Food Lover';
+			} else {
+				myself = myself + ', Food Lover';
+			}
+		}
+		if(item2 == true){
+			if(myself == ''){
+				myself = myself + 'Hiking Addict';
+			} else {
+				myself = myself + ', Hiking Addict';
+			}
+		}
+		if(item3 == true){
+			if(myself == ''){
+				myself = myself + 'Traveler';
+			} else {
+				myself = myself + ', Traveler';
+			}
+		}
+		
+		myself = myself + '.';
+		
+		var name = $('#inpName').val();
+		var job = $('#inpJob').val();
+		var city = $('#inpCity').val();
+		var country = $('#inpCountry').val();
+		var email = $('#inpEmail').val();
+		
+		var s = '<b>' + name + '</b>' +
+		    	'<br>' +
+		    	myself +
+			'<br>' +
+		    	job + '.<br>' +
+			'Currently living in ' + city + ', ' + country + '.' ;
+		
+		$('#divProfile').html(s);
+		
+	});
 	
 });
 	
