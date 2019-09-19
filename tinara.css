@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: 'Lekton', sansx-serif;
+    font-size: 100%; 
+    font-weight: 300;
+    line-height: 1.8;
+}
+p, td, li, label {
+    font-family: 'Lekton', sans-serif;
+    font-size: 1.19rem; 
+}
+a, a:active, a:hover, a:visited {
+    color:#000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 2px;
+}
+h1 {
+    font-size:40px;
+}
+h2 {
+    font-size:30px;
+}  
+h3 {
+    font-size:20px;
+}  
+h4 {
+    font-size:20px;
+}  
+h5 {
+    font-size:15px;
+}  
+h6 {
+    font-size:10px;
+}          
+.display { margin-bottom: 0.5rem; }
+.display h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 55px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0.4rem 0;
+}
+.display p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+.reqspace {
+    margin-top: 50px;
+    margin-right:40px;
+}
+@media only screen and (max-width: 640px) {
+    .display h1 {font-size: 2.5rem;}
+    .display p {font-size: 1.4rem;}
+    .reqspace{
+        margin: 0 auto;
+    }
+}
+.prizes h1 {
+    font-size:30px;
+    margin-bottom: 20px;
+}
+.prizes p{
+    font-size:20px;
+}
+.container img{
+	height: 100%;
+    width: 100%;
+}
+i.icon {
+    font-size:40px;
+    color: #111;
+    margin: 10px;
+}
+.footer h3{
+    font-size: 25px;
+}
+.menu {
+	max-width: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    padding:10px;
+    margin: 0 auto;
+    text-align:center;
+    background-color: #fff;
+    height:100%;
+
+}
+.requirements h1 {
+    font-size:50px;
+    text-transform: uppercase;
+}
+.menu.deactive{
+	display:none;
+}
+.menu.active {
+	display:block;
+}
+.menu a {
+	margin: 10px 30px;
+	font-size: 20px;
+	color: #000;
+}
+.menu-button {
+	position:fixed;
+	z-index:100;
+	width:50px;
+    height:50px;
+    cursor: pointer;
+}
+
+.menu-button i {
+	font-size: 40px;
+	padding:10px;
+	
+}
+.menu h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0.4rem 0;
+}
+.menu-button.exit{
+    color: rgba(0,0,0,0.8);
+}
+.menu-button.enter{
+    color: rgba(255,255,255,0.8);
+}
